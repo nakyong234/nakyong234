@@ -1,19 +1,79 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <style>
-        label {width: 100px; display: inline-block; vertical-align:top; }
-        div {display:table; margin-left:auto; margin-right:auto; }
-        .orderinfo {  width: 250px; }
-        input[type='number'] { width:60px; }		
-		ul > li { list-style-type:none; }
+        label {
+            width: 250px;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        .orderinfo {
+            width: 250px;
+        }
+
+        input[type='number'] {
+            width: 60px;
+        }
+
+        ul>li {
+            list-style-type: none;
+        }
     </style>
 </head>
-<body>
 
-        <!--
+<body>
+    <h1>상품 주문서</h1>
+    <form action="" method="" enctype="">
+
+        <fieldset>
+            <legend>개인 정보</legend>
+            <div>
+                <label for="이름">이름</label><input type="text" name="" id="이름" placeholder="이름을 입력하시오">
+            </div>
+            <div>
+                <label for="연락처">연락처</label><input type="tel" name="" id="연락처" placeholder="연락처를 입력하시오">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>배송지 정보</legend>
+            <div>
+                <label for="주소">주소</label><input type="text" name="" id="주소" required>
+            </div>
+            <div>
+                <label for="전화번호">전화번호</label><input type="tel" name="" id="전화번호" required>
+            </div>
+            <div>
+                <label for="메모">메모</label><textarea name="" id="메모" cols="21" rows="10"></textarea>
+            </div>
+        </fieldset>
+
+
+        <fieldset>
+            <legend>주문 정보</legend>
+            <div>
+                <input type="checkbox" name="" id="checkbox" checked><label for="과테말라">과테말라 안티구아 (100g)</label>
+                <input type="number" name="" id="과테말라">개
+            </div>
+            <div>
+                <input type="checkbox" name="checkbox" id="인도네시아"><label for="인도네시아">인도네시아 만텔링 (100g)</label>
+                <input type="number" name="" id="인도네시아">개
+            </div>
+            <div>
+                <input type="checkbox" name="checkbox" id="탐라는도다"><label for="탐라는도다">탐라는도다(블렌딩) (100g)</label>
+                <input type="number" name="" id="탐라는도다">개
+            </div>
+        </fieldset>
+        <center>
+            <input type="submit" value="전송">
+            <input type="submit" value="다시 작성">
+        </center>
+    </form>
+    <!--
 		작업 순서
 		 개인 정보 
          배송지 정보
@@ -21,6 +81,6 @@
 		 주문하기
 		  다시작성 : form 입력 값 초기화
 	  -->
-    <h1>상품 주문서</h1>
 </body>
+
 </html>
