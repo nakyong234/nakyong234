@@ -1,33 +1,114 @@
 ﻿<!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <title></title>
     <style>
-        * { padding: 10px; margin-bottom: 10px;}
-        html,body { height: 100%; }
-		body  *  {border: 1px solid black; }
-        header { height: 60px; }
-        nav { }
+        * {
+            padding: 0;
+            margin: 0;
+        }
 
-        #wrapbody {overflow: auto; }
-        section {width: 46%; float: left; vertical-align: bottom; display: }
-        aside {width: 46%; height:100%; float: right; }
-        article {width: 80%; margin-left:auto; margin-right:auto;}
+        html,
+        body {
+            height: 100%;
+            padding: 10px;
+        }
+
+        body header,
+        nav,
+        section,
+        article,
+        aside,
+        footer {
+            border: 1px solid black;
+            margin: 0 0 10px 0;
+        }
+
+
+        header {
+            height: 60px;
+            border: 1px dodgerblue solid;
+        }
+
+        nav {
+            border: 1px dodgerblue solid;
+        }
+
+        #wrapbody {
+            overflow: auto;
+        }
+
+        section {
+            width: 46%;
+            float: left;
+            vertical-align: bottom;
+            border: 1px dodgerblue solid;
+        }
+
+        aside {
+            width: 46%;
+            height: 80px;
+            float: right;
+            border: 1px dodgerblue solid;
+        }
+
+        article {
+            width: 80%;
+            height: calc(100%-10px);
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px dodgerblue solid;
+        }
 
         .col-container {
-            display: table; /* Make the container element behave like a table */
-            width: 100%; /* Set full-width to expand the whole page */
+            display: table;
+            /* Make the container element behave like a table */
+            width: 100%;
+            /* Set full-width to expand the whole page */
         }
 
         .col {
-            display: table-cell; /* Make elements inside the container behave like table cells */
+            display: table-cell;
+            /* Make elements inside the container behave like table cells */
         }
 
-        footer {height: 30px; clear: both;}
+        footer {
+            height: 30px;
+            clear: both;
+            border: 1px dodgerblue solid;
+        }
     </style>
 </head>
-<body>
-</body>
-</html>
 
+<body>
+    <header>
+        header
+    </header>
+
+    <nav>
+        navigation
+    </nav>
+
+    <div id="wrapbody" class="col-container">
+        <section class="col">
+            section
+            <article>
+                article
+            </article>
+            <article>
+                article
+            </article>
+        </section>
+        <aside class="col">
+            aside
+        </aside>
+    </div>
+
+    <footer>
+        footer
+    </footer>
+</body>
+
+</html>
