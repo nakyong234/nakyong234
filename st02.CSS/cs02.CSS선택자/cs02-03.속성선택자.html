@@ -1,8 +1,35 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>CSS3 Selector Basic Page</title>
+    <style>
+        input {
+            background-color: yellow;
+        }
+
+        input[type="text"] {
+            background-color: red;
+        }
+
+        input[name="password"] {
+            background: blue;
+        }
+
+        input[value="findme"] {
+            background-color: green;
+        }
+
+        input[disabled] {
+            background-color: gray;
+        }
+
+        p[value="findme"] {
+            background-color: green;
+        }
+    </style>
 </head>
+
 <body>
     <input type="text" />
     <input type="password" />
@@ -14,6 +41,7 @@
     <h2>사용 불가능</h2>
     <input disabled />
 
-    <p type="text" name="password" value="findme" >  abc </p>
+    <p type="text" name="password" value="findme"> abc </p>
 </body>
-</html>
+
+</html>

@@ -3,6 +3,25 @@
 <head>
     <meta charset="utf-8">
     <title>박스모델</title>
+    <style>
+        * {margin: 0px; padding: 0px;}
+        div#borderstyle > div {width: 200px; height: 100px; text-align: center; background-color: white; border: 1px solid gray; margin: 20px; float: left;}
+        div#borderstyle > div.box1 {border: solid;}
+        div#borderstyle > div.box2 {border: dotted;}
+        div#borderstyle > div.box3 {border: dashed;}
+        
+        div#bordercolor {clear: both;}
+
+        div#bordercolor > div {width: 200px; height: 100px; border: dashed; margin: 20px; float: left;}
+        div#bordercolor > div.box1 {border-color: red;}
+        div#bordercolor > div.box2 {border-color: blue;}
+        div#bordercolor > div.box3 {border-color: red blue;}
+        div#bordercolor > div.box4 {border-color: blue red blue yellow;}
+
+        div#borderwidth {clear: both;}
+
+        div#borderwidth > div {}
+    </style>
 </head>
 <body>
     <div id="borderstyle">
@@ -31,4 +50,4 @@
     </div>
 
 </body>
-</html>
+</html>
