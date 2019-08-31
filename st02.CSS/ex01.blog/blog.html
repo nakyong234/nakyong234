@@ -1,9 +1,95 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>HTML5 Basic Page</title>
+    <style>
+        body {
+            background-color: lightgray;
+            min-width: 100%;
+            min-height: 100%;
+        }
+
+        div#page-wrapper {
+            background-color: white;
+            border-radius: 10px;
+            width: 960px;
+            padding: 50px;
+            margin: 50px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        div.pull-left {
+            float: left;
+        }
+
+        div.pull-right {
+            float: right;
+        }
+
+        ul.outer-menu {margin: 10px;}
+        li.outer-menu-item {
+            float: left;
+            padding: 0 10px;
+        }
+
+        input.input-search {
+            border-radius: 10px 0 0 10px;
+            float: left;
+            padding: 5px 0 5px 5px;
+            margin: 5px 0 5px 5px;
+        }
+               
+        input.input-search-submit {
+            border-radius: 0 10px 10px 0;
+            float: left;
+            height: 29px;
+            padding: 5px 0 5px;
+            margin: 5px 0 5px;
+        }
+
+        nav#main-navigation {
+            border: 1px solid;
+            border-color: lightgrey white;
+           
+        }
+
+        nav#main-navigation::after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+
+        div#content::after {
+            clear: both;
+            display: block;
+            content: '';
+        }
+
+        aside#main-aside {
+            float: right;
+        }
+
+        div.aside-list>a {
+            float: right;
+        }
+
+        div#content {
+            width: 900px;
+            margin: 0;
+        }
+
+        section#main-section {
+            width: 800px;
+            float: left;
+        }
+    </style>
 </head>
+
 <body>
     <div id="page-wrapper">
         <header id="main-header">
@@ -17,31 +103,12 @@
                 <ul class="outer-menu">
                     <li class="outer-menu-item">
                         <span class="menu-title">HTML5</span>
-                        <ul class="inner-menu">
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                        </ul>
                     </li>
                     <li class="outer-menu-item">
                         <span class="menu-title">CSS3</span>
-                        <ul class="inner-menu">
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                        </ul>
                     </li>
                     <li class="outer-menu-item">
                         <span class="menu-title">JavaScript</span>
-                        <ul class="inner-menu">
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                            <li class="inner-menu-item"><a href="#">데이터</a></li>
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -65,9 +132,24 @@
                         <img src="http://placehold.it/430x280" />
                         <br />
                         <br />
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo justo ac lorem pretium vitae rhoncus lectus ullamcorper. Aliquam facilisis euismod diam sollicitudin commodo. Nunc sagittis sapien venenatis lorem vestibulum cursus pellentesque mi sodales. Donec pellentesque hendrerit turpis, vitae tempor nibh ultricies at. Aliquam consequat rutrum erat, vel sodales tellus sagittis at. Proin sollicitudin augue eu augue vehicula vitae bibendum odio porta. Aliquam elit arcu, venenatis in imperdiet ut, scelerisque non dolor. Donec in vulputate tortor. Fusce egestas rutrum mi quis ultricies. Vivamus blandit augue ac felis ullamcorper consectetur. Curabitur pretium fringilla neque, vitae cursus massa auctor vitae. Integer non massa sit amet lacus accumsan blandit. Vivamus fermentum tellus at justo iaculis eu tempus lorem venenatis. Suspendisse quis eros consectetur tellus posuere commodo. In hac habitasse platea dictumst.</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent commodo justo ac lorem
+                            pretium vitae rhoncus lectus ullamcorper. Aliquam facilisis euismod diam sollicitudin
+                            commodo. Nunc sagittis sapien venenatis lorem vestibulum cursus pellentesque mi sodales.
+                            Donec pellentesque hendrerit turpis, vitae tempor nibh ultricies at. Aliquam consequat
+                            rutrum erat, vel sodales tellus sagittis at. Proin sollicitudin augue eu augue vehicula
+                            vitae bibendum odio porta. Aliquam elit arcu, venenatis in imperdiet ut, scelerisque non
+                            dolor. Donec in vulputate tortor. Fusce egestas rutrum mi quis ultricies. Vivamus blandit
+                            augue ac felis ullamcorper consectetur. Curabitur pretium fringilla neque, vitae cursus
+                            massa auctor vitae. Integer non massa sit amet lacus accumsan blandit. Vivamus fermentum
+                            tellus at justo iaculis eu tempus lorem venenatis. Suspendisse quis eros consectetur tellus
+                            posuere commodo. In hac habitasse platea dictumst.</p>
                         <br />
-                        <p>Praesent orci quam, ornare sed scelerisque ac, porta a justo. Pellentesque quis magna sed magna vehicula semper ac ut enim. Duis ut mattis ligula. Mauris at sem elit. Vestibulum justo tortor, malesuada non tincidunt quis, feugiat ut metus. Maecenas varius neque ut diam ultrices scelerisque. Praesent lectus massa, tincidunt vel adipiscing non, vehicula ut magna. Cras quis lacinia ipsum. Sed consequat consectetur volutpat. Integer sed tortor risus. Donec accumsan ante vel justo porttitor volutpat.</p>
+                        <p>Praesent orci quam, ornare sed scelerisque ac, porta a justo. Pellentesque quis magna sed
+                            magna vehicula semper ac ut enim. Duis ut mattis ligula. Mauris at sem elit. Vestibulum
+                            justo tortor, malesuada non tincidunt quis, feugiat ut metus. Maecenas varius neque ut diam
+                            ultrices scelerisque. Praesent lectus massa, tincidunt vel adipiscing non, vehicula ut
+                            magna. Cras quis lacinia ipsum. Sed consequat consectetur volutpat. Integer sed tortor
+                            risus. Donec accumsan ante vel justo porttitor volutpat.</p>
                     </div>
                 </article>
             </section>
@@ -98,18 +180,5 @@
         </footer>
     </div>
 </body>
-</html>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script>
-    $(document).ready(function () {
-        $('.inner-menu').hide();
-
-        $('.outer-menu-item').mouseover(function () {
-            $(this).find('.inner-menu').show();
-        })
-        .mouseout( function () {
-            $(this).find('.inner-menu').hide();
-        });
-    });
-</script>
+</html>
