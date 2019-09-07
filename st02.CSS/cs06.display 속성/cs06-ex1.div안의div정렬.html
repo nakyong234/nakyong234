@@ -1,42 +1,63 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <title>div 안에 div 가운데 정렬</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        div.p {
+            width: 400px;
+            height: 200px;
+            border: 1px solid red;
+        }
+
+        div.c {
+            width: 200px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
 </head>
+
 <body>
     <h1> 수평 가운데 정렬 </h1>
 
     <h2>margin: auto </h2>
     <div class="p" style="text-align:center;">
-        <div class="c" style="margin: auto; ">
+        <div class="c" style="margin: auto; margin-top: 50px; line-height: 100px;">
             test
         </div>
     </div>
-    <hr >
-	
+    <hr>
+
     <h2>display:inline-block; </h2>
     <div class="p" style="text-align:center;">
-        <div class="c" style="display:inline-block;  ">
+        <div class="c" style="display:inline-block; margin-top: 50px; line-height: 100px;">
             test
         </div>
     </div>
-    <hr >
-	
+    <hr>
+
     <h2>display: flex; align-items: center; </h2>
-    <div class="p" style="display: flex; align-items:center;">
-        <div class="c" >
+    <div class="p" style="display: flex; align-items:center; margin-top: 50px; line-height: 100px;">
+        <div class="c">
             test
         </div>
     </div>
-    <hr >
-	
+    <hr>
+
     <h2>display: table, table-cell </h2>
-    <div class="outer">
+    <div class="outer" style="display: flex; align-items:center; margin-top: 50px; line-height: 100px;">
         <div class="inner">
-          <div class="centered">
-          </div>
+            <div class="centered">
+            </div>
         </div>
     </div>
 </body>
-</html>
+
+</html>

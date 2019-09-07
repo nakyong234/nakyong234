@@ -6,7 +6,6 @@ ul, li { list-style-type: none;}
 a {text-decoration:none; color:#666;}
 div { float: left; }
 
-
 /*menu1*/
 #menu1 { margin:50px; }
 #menu1>li                   { position:relative;margin-bottom:5px;border:1px solid red;width:100px;}

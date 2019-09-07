@@ -1,12 +1,24 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>text-overflow</title>
     <style>
-        div.a {width: 100px; border: 2px solid green; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;}
-        div.a:hover {white-space: normal; width: auto;}
+        div.a {
+            width: 100px;
+            border: 2px solid green;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        div.a:hover {
+            white-space: normal;
+            width: auto;
+        }
     </style>
 </head>
+
 <body>
     <h1>The text-overflow</h1>
 
@@ -14,4 +26,5 @@
 
     <div class="a">This is some long text that will not fit in the box.</div>
 </body>
+
 </html>

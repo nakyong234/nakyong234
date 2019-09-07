@@ -1,11 +1,76 @@
 <!doctype html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <title>자식>자식>자식></title>
     <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        hr {
+            clear: both;
+            border: none;
+        }
+
+        ul,
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        body>div {
+            float: left;
+            margin: 50px 200px 0 10px;
+            text-align: center;
+        }
+
+        body::after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+
+        ul#menu1>li {
+            border: 1px solid black;
+        }
+
+        ul#menu1>li>ul {
+            display: none;
+        }
+
+        ul#menu1>li:hover>ul {
+            display: block;
+        }
+
+        ul#menu2>li {
+            float: left;
+            width: 100px;
+            border: 1px solid black;
+        }
+
+        ul#menu2::after {
+            clear: both;
+            content: '';
+            display: block;
+        }
+
+        ul#menu2>li>ul {
+            display: none;
+        }
+
+        ul#menu2>li:hover>ul {
+            display: block;
+        }
     </style>
+    <link rel="stylesheet" href="./dropmenu.css">
 </head>
+
 <body>
     <div>
         <ul id="menu1">
@@ -26,7 +91,7 @@
             </li>
         </ul>
     </div>
-
+    <hr>
     <div>
         <ul id="menu2">
             <li><a href="#">MENU3</a>
@@ -46,7 +111,7 @@
             </li>
         </ul> <!-- float 해제 -->
     </div>
-
+    <hr>
     <div>
         <ul id="menu3">
             <li><a href="#">MENU5</a>
@@ -67,5 +132,5 @@
         </ul>
     </div>
 </body>
-</html>
 
+</html>
